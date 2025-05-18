@@ -8,7 +8,7 @@ const createToken = (id) => {
     if (!process.env.JWT_SECRET) {
         throw new Error("JWT_SECRET not defined in environment");
     }
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" }); 
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" }); // optional expiration
 };
 
 // Login controller
